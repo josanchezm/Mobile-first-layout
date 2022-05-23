@@ -11,16 +11,143 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/tablet-desktop.css" media="(min-width: 830px)">
     <title>Mobile first project</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <img src="./assets/images/header-logo.svg" alt="Batatabit logo">
+        <div class="header--title-container">
+            <h1>The next revolution in cryptocurrency exchange</h1>
+            <p>Batatabit helps you navigate between the different prices and trends</p>
+            <a href="#plans" class="header--button">Meet our plans <span><img src="./assets/icons/arrow-down.svg" alt="Down arrow"></span></a>
+        </div>
+    </header>
     <main>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section class="exchange-rates-section">
+            <picture class="bitcoin-logo"><img src="./assets/images/Bitcoin.svg" alt="Bitcoin logo"></picture>
+            <div class="exchange-rates-section--text">
+                <h2>We make all exchange rates visible</h2>
+                <p>We bring information in real time from the most important exchange houses and currencies in the world.</p>
+            </div>
+            <section class="cryptocurrencies-information-commissions-section">
+                <div class="cryptocurrencies-information">
+                    <h3 class="cryptocurrencies-information--title">Coins</h3>
+                    <ul class="cryptocurrencies-information--table">
+                        <li>Bitcoin</li>
+                        <li class="cryptocurrencies-information--prices">$ 1.96</li>
+                        <li><img src="./assets/icons/trending-down.svg" alt="Trending down arrow"></li>
+                        <li>Ethereum</li>
+                        <li class="cryptocurrencies-information--prices">$ 0.07</li>
+                        <li><img src="./assets/icons/trending-up.svg" alt="Trending up arrow"></li>
+                        <li>Ripple</li>
+                        <li class="cryptocurrencies-information--prices">$ 2.15</li>
+                        <li><img src="./assets/icons/trending-down.svg" alt="Trending down arrow"></li>
+                        <li>Stellar</li>
+                        <li class="cryptocurrencies-information--prices">$ 4.96</li>
+                        <li><img src="./assets/icons/trending-down.svg" alt="Trending down arrow"></li>
+                    </ul>
+                    <p class="cryptocurrencies-information--p"><b>Updated:</b> July 19, 23:45</p>
+                </div>
+                <div class="cryptocurrencies-commissions">
+                    <h3 class="cryptocurrencies-commissions--title">Commissions</h3>
+                    <ul class="cryptocurrencies-commissions--table">
+                        <li>Bitrade</li>
+                        <li class="cryptocurrencies-commissions--prices">$ 12.96</li>
+                        <li>Bitpreco</li>
+                        <li class="cryptocurrencies-commissions--prices">$ 13.07</li>
+                        <li>Novadax</li>
+                        <li class="cryptocurrencies-commissions--prices">$ 13.15</li>
+                        <li>Coinext</li>
+                        <li class="cryptocurrencies-commissions--prices">$ 14.96</li>
+                    </ul>
+                    <p class="cryptocurrencies-commissions--p"><b>Updated:</b> July 19, 23:48</p>
+                </div>
+            </section>
+            <picture class="potato-logo"><img src="./assets/images/Potato.svg" alt="Potato image"></picture>
+        </section>
+        <section class="benefits-section">
+            <div class="title-p-container">
+                <h2>We create products without comparison</h2>
+                <p>Reliable and designed for your daily use</p>
+            </div>
+            <section class="benefits-section-cards-container">
+                <div class="benefits-section--cards">
+                    <picture>
+                        <img src="./assets/icons/clock.svg" alt="Clock">
+                    </picture>
+                    <h3>Real time</h3>
+                    <p>Our API takes minute-by-minute information on the rates that most determine behavior</p>
+                </div>
+                <div class="benefits-section--cards">
+                    <picture>
+                        <img src="./assets/icons/eye.svg" alt="Eye">
+                    </picture>
+                    <h3>There are no hidden fees</h3>
+                    <p>Neither in the purchase nor at the time of exit, Batabit always shows you the real cost of what you are acquiring</p>
+                </div>
+                <div class="benefits-section--cards">
+                    <picture>
+                        <img src="./assets/icons/dollar-sign.svg" alt="Money sign">
+                    </picture>
+                    <h3>Compare currencies</h3>
+                    <p>No more rumours, with Babtabit you will know the real value of each coin in the current market.</p>
+                </div>
+                <div class="benefits-section--cards">
+                    <picture>
+                        <img src="./assets/icons/check-circle.svg" alt="Check icon">
+                    </picture>
+                    <h3>Reliable information</h3>
+                    <p>Our sources are 100% verified and we continue to audit their content as they are updated</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="meet-bitcoin-section">
+            <h2>Meet it today</h2>
+        </section>
+
+        <section id="plans" class="plans-section">
+            <div>
+                <h2>Choose the plan that best suits you</h2>
+                <p>Any plan gives you full access to our platform</p>
+            </div>
+            <section class="payments-card-container">
+                <article>
+                    <p>Recomended</p>
+                    <div>
+                        <h3>Anual payment</h3>
+                        <p><span>$</span> 99</p>
+                        <p>You save $129 compared to the monthly plan</p>
+                        <button class="payments-card-container--button">Choose this <span><img src="./assets/icons/arrow-right.svg" alt="Right arrow"></span></button>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Six-months-payment</h3>
+                        <p><span>$</span> 65</p>
+                        <p>You save $49 compared to the monthly plan</p>
+                        <button class="payments-card-container--button">Choose this <span><img src="./assets/icons/arrow-right.svg" alt="Right arrow"></span></button>
+                    </div>
+                </article>
+                <article>
+                    <div>
+                        <h3>Monthly payment</h3>
+                        <p><span>$</span> 19</p>
+                        <p>This payment method has no extra benefits</p>
+                        <button class="payments-card-container--button">Choose this <span><img src="./assets/icons/arrow-right.svg" alt="Right arrow"></span></button>
+                    </div>
+                </article>
+            </section>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <ul>
+            <li><a href="/">LinkedIn</a></li>
+            <li><a href="/">Crunchbase</a></li>
+            <li><a href="/">Hackernews</a></li>
+        </ul>
+        <picture><img src="./assets/images/footer-logo.svg" alt="Babtabit logo"></picture>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,14 @@
+@media(min-width: 830px) {
+    .cryptocurrencies-information-commissions-section::-webkit-scrollbar, .payments-card-container::-webkit-scrollbar {
+       display: none;
+    }
+    .benefits-section-cards-container {
+        max-width: 804px;
+        margin: 0 auto;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+    footer ul {
+        gap: 3px;
+    }
+}

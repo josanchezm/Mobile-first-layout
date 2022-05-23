@@ -17,7 +17,19 @@
     --grey: #BABABA;
     --off-white: #FAF8F7;
     --just-white: #FFFFFF;
+    /* Font sizes */
+    --title-size: 2.4rem;
+    --sub-title-size: 1.8rem;
+    --p-size: 1.4rem;
+    --bitcoin-date-size: 1.6rem;
+    /* Line heights */
+    --title-line-height: 2.6rem;
+    --subtitle-p-line-height: 1.8rem;
+    --bitcoin-line-height: 1.936rem;
+    --bitcoin-price-line-height: 1.694rem;
 }
+
+/* Global styles */
 
 * {
     box-sizing: border-box;
@@ -28,4 +40,560 @@
 html {
     font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    background-color: var(--off-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Mobile styles */
+
+/* Header */
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 320px;
+    height: 334px;
+    padding: 0 15px;
+    gap: 50px;
+    background: linear-gradient(207.8deg, var(--warm-black) 16.69%, var(--bitcoin-orange) 100%);
+    text-align: center;
+}
+
+header > img {
+    margin-top: 40px;
+    width: 150px;
+    height: 24px;
+    align-self: center;
+}
+
+header .header--title-container {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 218px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 35px;
+}
+
+.header--title-container > h1 {
+    font-size: var(--title-size);
+    line-height: var(--title-line-height);
+    font-weight: bold;
+    color: var(--just-white);
+}
+
+.header--title-container > p {
+    font-size: var(--p-size);
+    font-weight: 500;
+    line-height: var(--subtitle-p-line-height);
+    color: var(--soft-orange);
+}
+
+header .header--title-container .header--button {
+    position: absolute;
+    bottom: -22px;
+    padding: 12px 16px;
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 4px;
+    color: var(--warm-black);
+    text-align: center;
+    font-size: var(--p-size);
+    font-weight: bold;
+    line-height: var(--subtitle-p-line-height);
+}
+
+header .header--title-container .header--button span {
+    margin-left: 10px;
+}
+
+/* Main */
+
+/* Cryptocurrencies section */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    min-width: 320px;
+    margin-top: 60px;
+}
+
+.exchange-rates-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0 15px;
+    padding-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+
+.exchange-rates-section .bitcoin-logo {
+    width: 195px;
+    height: 195px;
+}
+
+.exchange-rates-section .bitcoin-logo img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.exchange-rates-section--text {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+}
+
+.exchange-rates-section--text h2 {
+    font-size: var(--title-size);
+    font-weight: 700;
+    line-height: var(--title-line-height);
+    color: var(--warm-black);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.exchange-rates-section--text p {
+    font-size: var(--p-size);
+    font-weight: 500;
+    line-height: var(--subtitle-p-line-height);
+    color: #757575;
+    text-align: center;
+}
+
+.cryptocurrencies-information-commissions-section {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    align-items: center;
+    padding: 15px;
+}
+
+.cryptocurrencies-information-commissions-section::-webkit-scrollbar, .payments-card-container::-webkit-scrollbar {
+    height: 10px;
+    background: transparent;
+}
+
+.cryptocurrencies-information-commissions-section::-webkit-scrollbar-thumb, .payments-card-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(207.8deg, var(--warm-black) 16.69%, var(--bitcoin-orange) 100%);
+    border-radius: 8px;
+}
+
+.cryptocurrencies-information {
+    display: flex;
+    scroll-snap-align: center;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.cryptocurrencies-information .cryptocurrencies-information--title {
+    font-size: var(--sub-title-size);
+    font-weight: 700;
+    line-height: 23.44px;
+    color: #FF9536;
+}
+
+.cryptocurrencies-information--table {
+    position: relative;
+    display: grid;
+    margin-top: -12px;
+    grid-template: repeat(4,39px)/70px 70px 25px;
+    min-width: 235px;
+    gap: 5px;
+    place-items: center;
+    background-color: var(--just-white);
+    padding: 0 25px;
+    font-family: "Inter", sans-serif;
+    font-size: var(--bitcoin-date-size);
+    font-weight: 500;
+    color: #B5B0AC;
+    border-radius: 8px;
+    line-height: var(--bitcoin-line-height);
+}
+
+.cryptocurrencies-information--table .cryptocurrencies-information--prices {
+    font-size: var(--p-size);
+    font-weight: 400;
+    line-height: var(--bitcoin-price-line-height);
+    color: #757575;
+}
+
+.cryptocurrencies-information .cryptocurrencies-information--p {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--soft-orange);
+    align-self: center;
+    font-family: "Inter", sans-serif;
+    font-size: var(--bitcoin-date-size);
+    line-height: 14.52px;
+    color: var(--warm-black-1);
+}
+
+.cryptocurrencies-commissions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    scroll-snap-align: center;
+    margin: 0 auto;
+}
+
+.cryptocurrencies-commissions .cryptocurrencies-commissions--title {
+    place-self: start;
+    font-size: var(--sub-title-size);
+    font-weight: 700;
+    line-height: 23.44px;
+    color: var(--secondary-blue);
+}
+
+.cryptocurrencies-commissions--table {
+    position: relative;
+    display: grid;
+    margin-top: -12px;
+    background-color: var(--just-white);
+    grid-template: repeat(4,39px)/70px 70px;
+    place-items: center;
+    gap: 5px;
+    place-self: center;
+    padding: 0 40px;
+    font-size: var(--bitcoin-date-size);
+    font-weight: 500;
+    line-height: var(--bitcoin-line-height);
+    border-radius: 8px;
+    color: #B5B0AC;
+}
+
+.cryptocurrencies-commissions--table .cryptocurrencies-commissions--prices {
+    font-size: var(--p-size);
+    font-weight: 400;
+    line-height: var(--bitcoin-price-line-height);
+    color: #757575;
+}
+
+.cryptocurrencies-commissions--p {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: var(--soft-blue);
+    align-self: center;
+    font-family: "Inter", sans-serif;
+    font-size: var(--bitcoin-date-size);
+    line-height: 14.52px;
+    color: var(--warm-black-1);
+}
+
+.potato-logo {
+    position: absolute;
+    bottom: -14px;
+}
+
+/* Benefits section */
+
+.benefits-section {
+    width: 100%;
+    min-width: 320px;
+    padding: 0 15px;
+    padding-bottom: 35px;
+    margin: 0 auto;
+    height: auto;
+    background-color: var(--warm-black);
+}
+
+.title-p-container {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.benefits-section .title-p-container > h2 {
+    font-size: var(--title-size);
+    font-weight: 700;
+    line-height: var(--title-line-height);
+    color: var(--just-white);
+    margin-bottom: 25px;
+}
+
+.benefits-section .title-p-container > p {
+    font-size: var(--p-size);
+    font-weight: 500;
+    line-height: var(--subtitle-p-line-height);
+    color: #808080;
+}
+
+.benefits-section--cards {
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    background-color: var(--warm-black-1);
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    text-align: justify;
+    flex-direction: column;
+    justify-items: center;
+    gap: 8px;
+}
+
+.benefits-section--cards picture {
+    width: 20px;
+    height: 20px;
+}
+
+.benefits-section--cards picture img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.benefits-section--cards h3 {
+    font-size: var(--sub-title-size);
+    font-weight: 700;
+    line-height: var(--subtitle-p-line-height);
+    color: var(--just-white);
+}
+
+.benefits-section--cards p {
+    font-size: var(--p-size);
+    font-weight: 500;
+    line-height: var(--subtitle-p-line-height);
+    color: #808080;
+}
+
+/* Meet bitcoin section */
+
+.meet-bitcoin-section {
+    width: 100%;
+    min-width: 320px;
+    max-width: 900px;
+    height: 70vh;
+    background-image: url("./assets/images/bitcoinbaby.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.meet-bitcoin-section h2 {
+    margin-top: 100px;
+    font-size: var(--title-size);
+    font-weight: 700;
+    line-height: var(--title-line-height);
+    color: var(--just-white);
+}
+
+/* Plans section */
+
+.plans-section {
+    width: 100%;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 15px;
+    gap: 35px;
+}
+
+.plans-section > div {
+    text-align: center;
+    width: 90%;
+    min-width: 288px; 
+}
+
+.plans-section > div h2 {
+    font-size: var(--title-size);
+    font-weight: 700;
+    line-height: var(--title-line-height);
+    color: var(--warm-black);
+}
+
+.plans-section > div p {
+    margin-top: 15px;
+    font-size: var(--p-size);
+    font-weight: 500;
+    line-height: var(--subtitle-p-line-height);
+    color: #757575;
+}
+
+.payments-card-container {
+    width: 75%;
+    max-width: 700px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    display: flex;
+    padding: 15px 0;
+    gap: 10px;
+}
+
+.payments-card-container article {
+    background-color: var(--just-white);
+    scroll-snap-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    position: relative;
+    width: 100%;
+    min-width: 190px;
+    height: 280px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 25px;
+}
+
+.payments-card-container article > p {
+    position: absolute;
+    top: calc(0% - (30.52px/2));
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    padding: 8px 13px;
+    font-weight: 700;
+    line-height: 1.452rem;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    color: var(--just-white);
+}
+
+.payments-card-container article > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.payments-card-container article > div h3 {
+    font-size: var(--p-size);
+    font-weight: 500;
+    line-height: var(--subtitle-p-line-height);
+    color: #000000;
+}
+
+.payments-card-container article div p:nth-child(2) {
+    display: flex;
+    margin-right: 10.73px;
+    gap: 3px;
+    font-family: "Inter", sans-serif;
+    font-size: 5.2rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 6.293rem;
+    color: #000000;
+}
+
+.payments-card-container article div p:nth-child(2) span {
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 10px;
+    align-self: start;
+    line-height: 1.452rem;
+    color: #363636;
+}
+
+.payments-card-container article div p:nth-child(3) {
+    font-family:  "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.452rem;
+    color: #757575;
+}
+
+.payments-card-container--button {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--off-white);
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-family: 'DM Sans', sans-serif;  
+    font-size: var(--p-size);
+    font-weight: 700;
+    line-height: var(--subtitle-p-line-height);
+    color: var(--warm-black);
+}
+
+/* footer styles */
+
+footer {
+    width: 100%;
+    min-width: 320px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    background-color: var(--bitcoin-orange);
+    padding: 30px 64px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+footer ul li a {
+    font-size: var(--p-size);
+    font-weight: 400;
+    line-height: var(--subtitle-p-line-height);
+    color: var(--just-white);
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer picture {
+    width: 64px;
+    height: 50px;
+}
+
+footer picture img {
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Media queries */
+
+@media(min-width: 650px) {
+    .cryptocurrencies-information-commissions-section {
+        display: flex;
+        gap: 85px;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+    }
 }
