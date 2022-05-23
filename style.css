@@ -186,7 +186,7 @@ main {
 .cryptocurrencies-information-commissions-section {
     display: flex;
     gap: 15px;
-    width: 100%;
+    width: 75%;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
@@ -206,7 +206,6 @@ main {
 
 .cryptocurrencies-information {
     display: flex;
-    scroll-snap-align: center;
     flex-direction: column;
     gap: 15px;
     margin: 0 auto;
