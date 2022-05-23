@@ -105,8 +105,3 @@ dist
 
 # Local files 
 mobile_first.txt
-
-#Images files
-*.jpg 
-*.png 
-*.svg 
