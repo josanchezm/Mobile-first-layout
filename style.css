@@ -186,7 +186,7 @@ main {
 .cryptocurrencies-information-commissions-section {
     display: flex;
     gap: 15px;
-    width: 100%;
+    width: 75%;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
@@ -206,7 +206,6 @@ main {
 
 .cryptocurrencies-information {
     display: flex;
-    scroll-snap-align: center;
     flex-direction: column;
     gap: 15px;
     margin: 0 auto;
@@ -559,13 +558,14 @@ footer {
 }
 
 footer ul {
+    min-width: 97px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
 }
 
-footer ul li a {
+footer ul li, footer ul li a {
     font-size: var(--p-size);
     font-weight: 400;
     line-height: var(--subtitle-p-line-height);
@@ -577,8 +577,7 @@ footer ul li a:hover {
 }
 
 footer picture {
-    width: 64px;
-    height: 50px;
+    min-width: 64px;
 }
 
 footer picture img {
